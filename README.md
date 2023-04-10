@@ -32,7 +32,42 @@ Big - O Notation is simply a notation to describe the behaviour of algorithms. I
 ##### Constant Time O(1)
 An algorithm will run in constant time if the output is produced in constant time regardless of the input size.
 Examples of constant time algorithms:
-> 1 Accessing nth element of an array
-> 2 Push and pop a stack
-> 3 Add and remove a queue elememt
-> 4 Accessing an element of Hash-Table
+> 1. Accessing nth element of an array
+
+> 2. Push and pop a stack
+
+> 3. Add and remove a queue elememt
+
+> 4. Accessing an element of Hash-Table
+
+##### Linear Time O(n)
+An algorithm will run in linear time if the execution time of the algorithm is directly proportional to the input size. That is, as the input size increases, execution time increases. Examples of linear time algorithms:
+> 1. Array operations like search elememt, find minimum and maximum element.
+
+> 2. LinkedList operations like traversal, find minimum and maximum element.
+
+##### Logarithmic Time O(log n)
+An algorithm will run in logarithmic time if the execution time of the algorithm is proportional to the logarithm of the input size. That is, a significant portion of the input is pruned or cut off (divided in half/half portion) without traversing it. Examples of logarithmic time algorithm:
+> Binary search algorithm
+
+##### N-LogN Time O(n log n)
+An algorithm will run in n logn time if the execution time of the algorithm is proportional to the product of the input size and logarithm of the input size. That is, each time the input is divided into half and each portion is processed independently. Examples of nlogn time algorithm:
+> Merge, quick and heap sorting algorithms
+
+##### Quadratic Time O(n^2)
+An algorithm will run in quadratic time if the execution time of the algorithm is proportional to the square of the input size. Here each element is compared with all other elements. Examples of quadratic time algorithm:
+> Bubble, selection and insertion sorting algorithms
+
+##### Exponential Time O(2^n)
+Here all possible subsets of elements of input data are generated.
+
+##### Factorial Time O(n!)
+Here all possible permutations of elements of input data are generated.
+
+Now let's see how we can derive the runtime function of an algorithm:
+> * Constants: each statement takes a constant time to run. Time complexity is O(1)
+> * Loops: running time of a loop is a product of running time of the statement inside a loop and number of iterations in the loop. Time complexity is O(n)
+> * Nested Loop: running time of a nested loop is a product of running time of the statements inside loop multiplied by a product of the size of all the loops. Time complexity is O(n^c), where c is the number of loops. For example, two loops will be O(n^2)
+> * Consecutive Statements: Add running times of all the consecutive statements.
+> * If-Else Statements: Just add the larger block of if or else and ignore the other block.
+> * Logarithmic Statement: If in each iteration the input size is decreased by a constant factor, then the time complexity is O(log n)
